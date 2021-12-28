@@ -1,0 +1,143 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* start header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+header .navbar-brand i {
+  color: #35a22c;
+  font-size: 2.5rem;
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+.navbar-light .navbar-brand {
+  font-size: 2rem;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #35a22c;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  position: relative;
+  transition: 0.3s;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #35a22c;
+}
+.navbar-light .navbar-nav .active > .nav-link {
+  transition: all 0.5s;
+}
+.navbar-light .navbar-nav .nav-link::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #35a22c;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.navbar-light .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+/* end header */
+/* start carousel */
+.carousel-inner {
+  height: 100vh;
+}
+.carousel-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.342);
+}
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.carousel-indicators .active {
+  background: #35a22c;
+}
+.carousel-indicators li {
+  border: none;
+}
+.carousel-fade .carousel-item {
+  height: 100vh;
+}
+.carousel-fade .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-caption img {
+  width: 100px;
+  height: 100px;
+  border: 50%;
+  border-radius: 100%;
+}
+.carousel-caption {
+  bottom: 50%;
+  transform: translateY(50%) translateX();
+}
+
+/* end carousel */
+/* start projects */
+.projects .nav {
+  justify-content: center;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #35a22c;
+}
+.nav-pills .nav-link {
+  color: black;
+  border: 1px solid black;
+}
+.nav-pills li {
+  margin: 0 10px;
+}
+.item__projects {
+  height: 400px;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.projects .card-body {
+  border: 1px solid white;
+  flex-grow: 1;
+  padding: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.projects .item__projects:hover .card-body {
+  border: 1px solid #35a22c;
+}
+
+/* end project  */
+.footer {
+  height: 100px;
+  background: red;
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .footer {
+    background: yellow;
+  }
+}
